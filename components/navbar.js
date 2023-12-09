@@ -1,6 +1,8 @@
 "use client";
 
 import { Fragment } from "react";
+import ThemeSwitch from "@/components/themeSwitch";
+
 import { Menu, Transition, Disclosure } from "@headlessui/react";
 import Container from "@/components/container";
 import Link from "next/link";
@@ -24,23 +26,16 @@ export default function Navbar(props) {
       label: "Contact",
       href: "/contact"
     }
+    // {
+    //   label: "Archive",
+    //   href: "/archive"
+    // }
   ];
 
   const rightmenu = [
     {
       label: "Archive",
       href: "/archive"
-    },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
     }
   ];
 
@@ -48,12 +43,12 @@ export default function Navbar(props) {
 
   return (
     <Container>
-      <nav>
+      <nav className="  ">
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10">
-                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
+              <div className="flex flex-wrap justify-between   md:flex-nowrap md:gap-10">
+                <div className="order-1 hidden w-full flex-col items-center justify-start  md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-start">
                   {leftmenu.map((item, index) => (
                     <Fragment key={`${item.label}${index}`}>
                       {item.children && item.children.length > 0 ? (
@@ -86,7 +81,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        GDSC NSUT
                       </span>
                     )}
                   </Link>
@@ -100,7 +95,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        GDSC NSUT
                       </span>
                     )}
                   </Link>
@@ -128,7 +123,7 @@ export default function Navbar(props) {
                   </Disclosure.Button>
                 </div>
 
-                <div className="order-2 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
+                <div className="order-2 hidden w-full flex-col items-center justify-end md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
                   {rightmenu.map((item, index) => (
                     <Fragment key={`${item.label}${index}`}>
                       {item.children && item.children.length > 0 ? (
@@ -154,6 +149,7 @@ export default function Navbar(props) {
                       )}
                     </Fragment>
                   ))}
+                  <ThemeSwitch />
                 </div>
               </div>
               <Disclosure.Panel>

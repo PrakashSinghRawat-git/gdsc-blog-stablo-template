@@ -3,14 +3,16 @@ import { urlForImage } from "@/lib/sanity/image";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function About({ authors, settings }) {
+export default function About({ authors }) {
   return (
     <Container>
       <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
         About
       </h1>
       <div className="text-center">
-        <p className="text-lg">We are a small passionate team.</p>
+        <p className="text-lg">
+          Look at me, in ma eyes. Lookin coo innit?
+        </p>
       </div>
 
       <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
@@ -37,16 +39,16 @@ export default function About({ authors, settings }) {
       </div>
 
       <div className="prose mx-auto mt-14 text-center dark:prose-invert">
+        <p>this gonna be a loooooooooooooooooooooooong paragraph</p>
         <p>
-          We provide real-time connectivity to enable software
-          providers and financial institutions to build integrated
-          products for their small business customers.
-        </p>
-        <p>
-          Our API infrastructure is leveraged by clients ranging from
-          lenders to corporate card providers and business forecasting
-          tools, with use cases including automatic reconciliation,
-          business dashboarding, and loan decisioning.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Maxime suscipit, unde, vitae ipsum assumenda natus cum
+          voluptatum provident vero consectetur, architecto excepturi
+          perferendis. Velit architecto repudiandae enim assumenda
+          dignissimos, dicta rerum laudantium expedita ex. Eveniet
+          repellat nulla exercitationem inventore, modi debitis
+          consequuntur fugit laborum distinctio ab accusamus veniam
+          soluta doloribus.
         </p>
         <p>
           <Link href="/contact">Get in touch</Link>
